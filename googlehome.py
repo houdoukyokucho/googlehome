@@ -40,6 +40,8 @@ cast.wait()
 
 # send http request to local.
 mc = cast.media_controller
+mc.play_media(f'http://{ip}:{port}/sound.mp3', 'audio/mp3')
+time.sleep(2)
 mc.play_media(f'http://{ip}:{port}/{mp3_file_name}', 'audio/mp3')
 mc.block_until_active()
 
